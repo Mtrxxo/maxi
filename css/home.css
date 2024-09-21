@@ -1,0 +1,267 @@
+:root{
+    --TEXT-COLOR: #f5f5f5;
+    --BACKGROUND-COLOR: #111111;
+}
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Nunito", sans-serif;
+    min-height: 100vh;
+    background-color: var(--BACKGROUND-COLOR);
+}
+
+.modal{
+    width: 400px;
+    padding: 1rem;
+    background-color: var(--TEXT-COLOR);
+    color: var(--BACKGROUND-COLOR);
+    position: absolute;
+    top: 40vh;
+    left: 35vw;
+    z-index: 1;
+    border-radius: 15px;
+    font-weight: 900;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    gap: 2rem;
+    text-align: justify;
+}
+
+.modal button{
+    width: 100px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 15px;
+    border: none;
+    background-color: var(--BACKGROUND-COLOR);
+    color: var(--TEXT-COLOR);
+    font-weight: 900;
+}
+
+h1,h2,h3{
+    font-family: "Lilita One", sans-serif;
+}
+
+header{
+    background-image: url(../images/Background.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.background{
+    background-color: hsla(0, 0%, 0%, 0.486);
+    height: 100%;
+}
+
+nav{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 2.5rem 5rem;
+}
+
+.logo{
+    color: var(--TEXT-COLOR);
+    font-family: "Lilita One", sans-serif;
+    font-weight: 900;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+ul{
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+li{
+    list-style-type: none;
+}
+
+li a{
+    text-decoration: none;
+    color: var(--TEXT-COLOR);
+    font-weight: 700;
+}
+
+li a:hover,
+li a:active{
+    font-weight: 900;
+    font-size: 1.2rem;
+    transition: all 0.3s 0s ease-in;
+}
+
+li:nth-child(4),
+li:nth-child(5){
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--TEXT-COLOR);
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+h1{
+    color: var(--TEXT-COLOR);
+    font-size: 3.5rem;
+    position: absolute;
+    top: 50vh;
+    text-align: center;
+}
+
+h2{
+    color: var(--TEXT-COLOR);
+    font-weight: 900;
+    font-size: 5rem;
+    text-align: center;
+}
+
+.bars,
+.xmark{
+    color: var(--TEXT-COLOR);
+    font-size: 2rem;
+    display: none;
+}
+
+nav div{
+    display: none;
+}
+
+.img__container{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+}
+
+.nowrap-one,
+.nowrap-two{
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+}
+
+.nowrap-one img,
+.nowrap-two img{
+    width: 100%;
+
+}
+
+#about{
+    color: var(--TEXT-COLOR);
+    text-align: center;
+    margin: 2.5rem 0;
+}
+
+#about p{
+    padding: 1.5rem 5rem;
+    line-height: 1.6;
+}
+
+h3{
+    font-size: 2rem;
+}
+
+.btndiv{
+    padding: 2rem 0;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup,
+.menu{
+    color: var(--TEXT-COLOR);
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border: 2px solid var(--TEXT-COLOR);
+    border-radius: 15px;
+    font-weight: 700;
+}
+
+.signup:hover,
+.signup:active,
+.menu:hover,
+.menu:active{
+    font-size: 1.2rem;
+    font-weight: 900;
+    transition: all 0.3s 0s ease-in;
+}
+
+@media(min-width:360px){
+    header{
+        height: 100vh;
+
+    }
+
+    ul{
+        display: none;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        padding: 10rem 0 0;
+        position: fixed;
+        height: 100%;
+        width: 50%;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        background-color: var(--BACKGROUND-COLOR);
+    }
+
+    li:nth-child(4),
+    li:nth-child(5){
+        margin: 1rem 0 0;
+        width: 80%;
+        text-align: center;
+    }
+
+    nav div{
+        display: flex;
+    }
+
+    .bars,
+    .xmark{
+        display: flex;
+        cursor: pointer;
+    }
+
+    .xmark{
+        z-index: 3;
+        display: none;
+    }
+}
+
+@media(min-width:992px){
+    nav div{
+        display: none;
+    }
+
+    ul{
+        display: flex;
+        flex-flow: row nowrap;
+        position: static;
+        background-color: transparent;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        width: initial;
+    }
+
+    li:nth-child(4),
+    li:nth-child(5){
+        margin: 0;
+        width: initial;
+        padding: 0.5rem 1rem;
+    }
+}
